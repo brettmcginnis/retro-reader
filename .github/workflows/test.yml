@@ -1,0 +1,12 @@
+name: Tests
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: thyrlian/android-sdk
+    steps:
+      - uses: actions/checkout@v3
+      - run: ./gradlew test
