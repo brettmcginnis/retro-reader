@@ -1,6 +1,6 @@
 package com.brettmcgin.retroreader
 
-import com.brettmcgin.retroreader.document.impl.DefaultDocument
+import com.brettmcgin.retroreader.document.glue.DefaultDocument
 import org.junit.Test
 
 import org.junit.Assert.*

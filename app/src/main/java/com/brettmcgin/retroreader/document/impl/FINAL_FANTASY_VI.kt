@@ -1,19 +1,6 @@
 package com.brettmcgin.retroreader.document.impl
 
-import com.brettmcgin.retroreader.document.api.Document
-
-object DefaultDocument : Document {
-    override val lineCount: Int
-        get() = lines.size
-
-    override val maxCharacterLineCount: Int
-        get() = lines.maxOf { it.length }
-
-    override val lines: List<String>
-        get() = LINES
-}
-
-private val LINES = listOf(
+internal val FINAL_FANTASY_VI = listOf(
     "",
     "                     ___________ __               __   ",
     "                     \\_   _____/|__| ____ _____  |  |  ",

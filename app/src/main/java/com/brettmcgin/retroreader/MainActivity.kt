@@ -7,8 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.brettmcgin.retroreader.document.impl.DefaultDocument
-import com.brettmcgin.retroreader.document.ui.DocumentContent
+import com.brettmcgin.retroreader.bookmark.glue.links
+import com.brettmcgin.retroreader.document.glue.DefaultDocument
 import com.brettmcgin.retroreader.ui.theme.RetroReaderTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    DocumentContent(DefaultDocument)
+                    DocumentContent(DefaultDocument, { clickedLine -> clickedLine.links.firstOrNull() })
                 }
             }
         }
